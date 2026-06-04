@@ -130,8 +130,8 @@
     height: 100%;
     justify-content: space-between;
     text-decoration: none;
-    flex: 0 0 calc(33.333% - 14px);
     box-sizing: border-box;
+    
 }
 
 .lots {
@@ -153,30 +153,32 @@
 
 .lots-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 23px;
     text-decoration: none;
     list-style: none;
+    justify-content: flex-start;
 
 }
 
 .card {
-    width: 334px;
+    flex: 0 0 calc((100% - 46px) / 3);  /* 3 карточки в ряд */
     min-height: 596px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    box-sizing: border-box;
 }
 
-.card--lot-01 {
+.card--card_type_film {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/images/card-lot-01.jpg);
 }
 
-.card--lot-02 {
+.card--card_type_book{
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/images/card-lot-02.jpg);
 }
 
-.card--lot-03 {
+.card--card_type_picture {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/images/card-lot-03.jpg);
 }
 
@@ -310,6 +312,7 @@
     gap: 48px;
     justify-content: center;
     padding-left: 188px;
+    padding-bottom: 131px;
 }
 
 .footer_social-list-item {
