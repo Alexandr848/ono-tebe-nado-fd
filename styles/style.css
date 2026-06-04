@@ -56,6 +56,7 @@
     text-underline-offset: 3px;
     margin-right: 10px;
 }
+
 .cover {
     box-sizing: border-box;
     display: flex;
@@ -124,7 +125,13 @@
 }
 
 .lots-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
     text-decoration: none;
+    flex: 0 0 calc(33.333% - 14px);
+    box-sizing: border-box;
 }
 
 .lots {
@@ -153,16 +160,12 @@
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 334px;
     min-height: 596px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    flex: 0 0 calc(33.333% - 14px);
-    box-sizing: border-box;
+    
 }
 
 .card--lot-01 {
@@ -179,6 +182,7 @@
 
 .card-title {
     display: flex;
+    justify-content: start;
     color: #ffffff;
     font-family: "Raleway", "Arial", sans-serif;
     font-weight: 700;
